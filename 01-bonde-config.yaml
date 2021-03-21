@@ -1,0 +1,17 @@
+network:
+ ethernets:
+   eth1:
+#eth1 interface connected to span port / tap
+     dhcp4: false
+   eth2:
+#eth1 management interface
+     dhcp4: true
+ version: 2
+ bonds:
+  bond0:
+    dhcp4: no
+    interfaces:
+    - eth1
+ #syntax is "- int_name" for to add to bonded interface
+ 
+    
